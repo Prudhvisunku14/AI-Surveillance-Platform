@@ -7,6 +7,81 @@ SurveillanceIQ is an AI-powered surveillance intelligence platform that transfor
 The system automatically detects people, tracks movement, identifies individuals, analyzes suspicious behaviour, generates threat scores, creates incident reports, and provides AI-generated security recommendations through a modern Security Operations Center (SOC) dashboard.
 
 ---
+## Project Structure
+
+```text
+AI-Surveillance-Platform/
+│
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── v1/
+│   │   │       └── endpoints/
+│   │   ├── core/
+│   │   ├── db/
+│   │   ├── models/
+│   │   ├── schemas/
+│   │   ├── services/
+│   │   ├── tasks/
+│   │   ├── utils/
+│   │   └── main.py
+│   │
+│   ├── tests/
+│   ├── requirements.txt
+│   └── Dockerfile
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── store/
+│   │   ├── hooks/
+│   │   ├── types/
+│   │   └── App.tsx
+│   │
+│   ├── public/
+│   ├── package.json
+│   ├── vite.config.ts
+│   └── Dockerfile
+│
+├── ml/
+│   ├── embeddings/
+│   ├── models/
+│   ├── init_face_registry.py
+│   └── generate_synthetic_videos.py
+│
+├── data/
+│   ├── annotations/
+│   ├── sensor_events/
+│   └── sample_data/
+│
+├── docs/
+│   ├── architecture.png
+│   ├── data_generation.md
+│   └── screenshots/
+│
+├── docker-compose.yml
+├── README.md
+├── openapi.json
+└── Makefile
+```
+
+### Directory Description
+
+| Directory          | Purpose                                                       |
+| ------------------ | ------------------------------------------------------------- |
+| backend/           | FastAPI backend services, APIs, database, processing pipeline |
+| frontend/          | React dashboard and user interface                            |
+| ml/                | Computer vision models, embeddings, AI utilities              |
+| data/              | Sample datasets, annotations, sensor events                   |
+| docs/              | Architecture diagrams, screenshots, documentation             |
+| openapi.json       | Exported API specification                                    |
+| docker-compose.yml | Multi-container deployment configuration                      |
+| README.md          | Project documentation and setup guide                         |
+
+```
+```
 
 # 🚀 Features
 
