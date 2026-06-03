@@ -323,33 +323,7 @@ Features:
 * Celery
 * Redis
 
----
 
-# 📂 Project Structure
-
-```text
-SurveillanceIQ/
-│
-├── backend/
-│   ├── app/
-│   ├── models/
-│   ├── services/
-│   ├── tasks/
-│   └── reports/
-│
-├── frontend/
-│   ├── src/
-│   ├── pages/
-│   ├── components/
-│   └── services/
-│
-├── data/
-├── uploads/
-├── outputs/
-├── reports/
-├── docs/
-└── docker-compose.yml
-```
 
 ---
 
