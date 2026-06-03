@@ -1,0 +1,24 @@
+{
+  "video_id": "V001",
+  "source": "synthetic_opencv",
+  "duration_seconds": 90,
+  "fps": 25,
+  "scenario": "lobby_entry",
+  "expected_events": [
+    {
+      "type": "identity_verified",
+      "timestamp_sec": 3.0,
+      "person_id": "P001"
+    },
+    {
+      "type": "loitering_warning",
+      "timestamp_sec": 30.0,
+      "person_id": "UNKNOWN_01"
+    },
+    {
+      "type": "person_exited",
+      "timestamp_sec": 60.0,
+      "person_id": "P002"
+    }
+  ]
+}

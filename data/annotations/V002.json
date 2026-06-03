@@ -1,0 +1,24 @@
+{
+  "video_id": "V002",
+  "source": "synthetic_opencv",
+  "duration_seconds": 120,
+  "fps": 25,
+  "scenario": "corridor_loitering",
+  "expected_events": [
+    {
+      "type": "zone_violation",
+      "timestamp_sec": 2.0,
+      "person_id": "P003"
+    },
+    {
+      "type": "loitering_critical",
+      "timestamp_sec": 60.0,
+      "person_id": "P003"
+    },
+    {
+      "type": "suspect_detected",
+      "timestamp_sec": 20.0,
+      "person_id": "P004"
+    }
+  ]
+}

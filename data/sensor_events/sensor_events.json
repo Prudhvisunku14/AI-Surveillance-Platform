@@ -1,0 +1,222 @@
+[
+  {
+    "event_id": "EVT_0001",
+    "timestamp": "2026-05-28T09:00:05+00:00",
+    "sensor_type": "biometric",
+    "location_id": "DOOR_A1",
+    "event": "face_scan_success",
+    "authorized": true,
+    "person_id": "P001",
+    "confidence": 0.97,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0002",
+    "timestamp": "2026-05-28T09:00:05.200000+00:00",
+    "sensor_type": "door_access",
+    "location_id": "DOOR_A1",
+    "event": "door_open",
+    "authorized": true,
+    "person_id": "P001",
+    "confidence": 0.97,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0003",
+    "timestamp": "2026-05-28T09:00:12+00:00",
+    "sensor_type": "biometric",
+    "location_id": "DOOR_A1",
+    "event": "face_scan_success",
+    "authorized": true,
+    "person_id": "P002",
+    "confidence": 0.94,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0004",
+    "timestamp": "2026-05-28T09:00:12.200000+00:00",
+    "sensor_type": "door_access",
+    "location_id": "DOOR_A1",
+    "event": "door_open",
+    "authorized": true,
+    "person_id": "P002",
+    "confidence": 0.94,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0005",
+    "timestamp": "2026-05-28T09:00:08+00:00",
+    "sensor_type": "motion",
+    "location_id": "LOBBY_Z01",
+    "event": "motion_detected",
+    "authorized": true,
+    "person_id": null,
+    "confidence": 0.86,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0006",
+    "timestamp": "2026-05-28T09:00:15+00:00",
+    "sensor_type": "motion",
+    "location_id": "LOBBY_Z01",
+    "event": "motion_detected",
+    "authorized": true,
+    "person_id": null,
+    "confidence": 0.71,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0007",
+    "timestamp": "2026-05-28T09:00:22+00:00",
+    "sensor_type": "motion",
+    "location_id": "LOBBY_Z01",
+    "event": "motion_detected",
+    "authorized": true,
+    "person_id": null,
+    "confidence": 0.77,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0008",
+    "timestamp": "2026-05-28T09:00:35+00:00",
+    "sensor_type": "motion",
+    "location_id": "LOBBY_Z01",
+    "event": "motion_detected",
+    "authorized": true,
+    "person_id": null,
+    "confidence": 0.76,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0009",
+    "timestamp": "2026-05-28T09:00:50+00:00",
+    "sensor_type": "motion",
+    "location_id": "LOBBY_Z01",
+    "event": "motion_detected",
+    "authorized": true,
+    "person_id": null,
+    "confidence": 0.88,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0010",
+    "timestamp": "2026-05-28T09:00:25+00:00",
+    "sensor_type": "door_access",
+    "location_id": "DOOR_B2",
+    "event": "door_open",
+    "authorized": true,
+    "person_id": "P001",
+    "confidence": 0.95,
+    "anomaly_flag": true
+  },
+  {
+    "event_id": "EVT_0011",
+    "timestamp": "2026-05-28T09:00:45+00:00",
+    "sensor_type": "biometric",
+    "location_id": "DOOR_A1",
+    "event": "face_scan_success",
+    "authorized": true,
+    "person_id": "P001",
+    "confidence": 0.96,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0012",
+    "timestamp": "2026-05-28T09:00:45.200000+00:00",
+    "sensor_type": "door_access",
+    "location_id": "DOOR_A1",
+    "event": "door_tailgate",
+    "authorized": true,
+    "person_id": "P001",
+    "confidence": 0.96,
+    "anomaly_flag": true
+  },
+  {
+    "event_id": "EVT_0013",
+    "timestamp": "2026-05-28T09:00:55+00:00",
+    "sensor_type": "biometric",
+    "location_id": "DOOR_C3",
+    "event": "face_scan_success",
+    "authorized": true,
+    "person_id": "P001",
+    "confidence": 0.95,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0014",
+    "timestamp": "2026-05-28T09:00:55.100000+00:00",
+    "sensor_type": "camera_trigger",
+    "location_id": "CAM_C3",
+    "event": "motion_detected",
+    "authorized": true,
+    "person_id": "P004",
+    "confidence": 0.88,
+    "anomaly_flag": true
+  },
+  {
+    "event_id": "EVT_0015",
+    "timestamp": "2026-05-28T09:01:10+00:00",
+    "sensor_type": "motion",
+    "location_id": "SERVER_ROOM_Z02",
+    "event": "motion_detected",
+    "authorized": false,
+    "person_id": null,
+    "confidence": 0.91,
+    "anomaly_flag": true
+  },
+  {
+    "event_id": "EVT_0016",
+    "timestamp": "2026-05-28T09:01:20+00:00",
+    "sensor_type": "biometric",
+    "location_id": "DOOR_D4",
+    "event": "face_scan_fail",
+    "authorized": false,
+    "person_id": null,
+    "confidence": 0.31,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0017",
+    "timestamp": "2026-05-28T09:01:22+00:00",
+    "sensor_type": "biometric",
+    "location_id": "DOOR_D4",
+    "event": "face_scan_fail",
+    "authorized": false,
+    "person_id": null,
+    "confidence": 0.28,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0018",
+    "timestamp": "2026-05-28T09:01:24+00:00",
+    "sensor_type": "biometric",
+    "location_id": "DOOR_D4",
+    "event": "face_scan_fail",
+    "authorized": false,
+    "person_id": null,
+    "confidence": 0.25,
+    "anomaly_flag": false
+  },
+  {
+    "event_id": "EVT_0019",
+    "timestamp": "2026-05-28T09:01:26+00:00",
+    "sensor_type": "door_access",
+    "location_id": "DOOR_D4",
+    "event": "door_open",
+    "authorized": true,
+    "person_id": "P005",
+    "confidence": 0.55,
+    "anomaly_flag": true
+  },
+  {
+    "event_id": "EVT_0020",
+    "timestamp": "2026-05-28T09:01:30+00:00",
+    "sensor_type": "camera_trigger",
+    "location_id": "CAM_Z02",
+    "event": "motion_detected",
+    "authorized": false,
+    "person_id": "P003",
+    "confidence": 0.85,
+    "anomaly_flag": true
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "person_id": "P001",
+    "name": "Alice Mercer",
+    "category": "Employee",
+    "risk_level": "Low",
+    "access_zones": "Lobby, Lab A, Server Room",
+    "embedding_path": "ml/embeddings/P001.npy",
+    "embedding_dim": 512,
+    "model": "FaceNet512_synthetic"
+  },
+  {
+    "person_id": "P002",
+    "name": "Bob Henley",
+    "category": "Employee",
+    "risk_level": "Low",
+    "access_zones": "Lobby, Lab A",
+    "embedding_path": "ml/embeddings/P002.npy",
+    "embedding_dim": 512,
+    "model": "FaceNet512_synthetic"
+  },
+  {
+    "person_id": "P003",
+    "name": "Carol Zhang",
+    "category": "Visitor",
+    "risk_level": "Medium",
+    "access_zones": "Lobby only",
+    "embedding_path": "ml/embeddings/P003.npy",
+    "embedding_dim": 512,
+    "model": "FaceNet512_synthetic"
+  },
+  {
+    "person_id": "P004",
+    "name": "Dave Rostov",
+    "category": "Suspect",
+    "risk_level": "High",
+    "access_zones": "NONE \u2014 flagged",
+    "embedding_path": "ml/embeddings/P004.npy",
+    "embedding_dim": 512,
+    "model": "FaceNet512_synthetic"
+  },
+  {
+    "person_id": "P005",
+    "name": "Unknown",
+    "category": "Unknown",
+    "risk_level": "High",
+    "access_zones": "NONE",
+    "embedding_path": "ml/embeddings/P005.npy",
+    "embedding_dim": 512,
+    "model": "FaceNet512_synthetic"
+  }
+]

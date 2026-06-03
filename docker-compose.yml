@@ -1,0 +1,89 @@
+version: "3.9"
+
+services:
+  # ── Backend API ────────────────────────────────────────────────────
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=development
+      - DATABASE_URL=sqlite+aiosqlite:///./surveillance.db
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/1
+      - CELERY_RESULT_BACKEND=redis://redis:6379/2
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - GENAI_ENABLED=${GENAI_ENABLED:-true}
+      - YOLO_CONFIDENCE=0.45
+      - FACE_SIMILARITY_THRESHOLD=0.82
+      - FACE_TENTATIVE_THRESHOLD=0.60
+      - EMBEDDINGS_DIR=ml/embeddings/
+      - FRAME_RETENTION_DAYS=30
+      - SECRET_KEY=${SECRET_KEY:-surveillance-platform-dev-secret-2024}
+      - ACCESS_TOKEN_EXPIRE_MINUTES=60
+    volumes:
+      - ./backend:/app
+      - backend_data:/app/data
+      - backend_frames:/app/frames
+      - backend_reports:/app/reports
+      - backend_embeddings:/app/ml/embeddings
+      - ./ml/embeddings:/app/ml/embeddings:ro
+    depends_on:
+      - redis
+    restart: unless-stopped
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # ── Celery Worker ──────────────────────────────────────────────────
+  worker:
+    build: ./backend
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///./surveillance.db
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/1
+      - CELERY_RESULT_BACKEND=redis://redis:6379/2
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - EMBEDDINGS_DIR=ml/embeddings/
+    volumes:
+      - ./backend:/app
+      - backend_data:/app/data
+      - backend_frames:/app/frames
+      - backend_embeddings:/app/ml/embeddings
+    depends_on:
+      - redis
+    command: celery -A app.core.celery_app.celery_app worker --loglevel=info -Q video,genai,reports -c 2
+    restart: unless-stopped
+
+  # ── Frontend ───────────────────────────────────────────────────────
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  # ── Redis ──────────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  # ── Flower (Celery monitoring) ─────────────────────────────────────
+  flower:
+    build: ./backend
+    ports:
+      - "5555:5555"
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/1
+    command: celery -A app.core.celery_app.celery_app flower --port=5555
+    depends_on:
+      - redis
+      - worker
+    restart: unless-stopped
+
+volumes:
+  backend_data:
+  backend_frames:
+  backend_reports:
+  backend_embeddings:

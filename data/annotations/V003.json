@@ -1,0 +1,19 @@
+{
+  "video_id": "V003",
+  "source": "synthetic_opencv",
+  "duration_seconds": 60,
+  "fps": 25,
+  "scenario": "open_area",
+  "expected_events": [
+    {
+      "type": "crowd_alert",
+      "timestamp_sec": 5.0,
+      "person_id": "multiple"
+    },
+    {
+      "type": "sudden_movement",
+      "timestamp_sec": 20.0,
+      "person_id": "ERRATIC"
+    }
+  ]
+}

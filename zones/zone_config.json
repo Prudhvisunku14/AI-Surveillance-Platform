@@ -1,0 +1,32 @@
+{
+  "zones": [
+    {
+      "id": "Z01", "name": "Lobby",
+      "points": [[50, 400], [750, 400], [750, 580], [50, 580]],
+      "zone_type": "monitored", "risk_level": 1,
+      "max_occupancy": 20,
+      "allowed_categories": ["Employee", "Visitor", "Unknown"]
+    },
+    {
+      "id": "Z02", "name": "Server Room / Lab A",
+      "points": [[0, 0], [400, 0], [400, 300], [0, 300]],
+      "zone_type": "restricted", "risk_level": 3,
+      "max_occupancy": 5,
+      "allowed_categories": ["Employee"]
+    },
+    {
+      "id": "Z03", "name": "Corridor",
+      "points": [[0, 0], [800, 0], [800, 600], [0, 600]],
+      "zone_type": "monitored", "risk_level": 2,
+      "max_occupancy": 10,
+      "allowed_categories": ["Employee", "Visitor"]
+    },
+    {
+      "id": "Z04", "name": "Exit",
+      "points": [[600, 400], [800, 400], [800, 600], [600, 600]],
+      "zone_type": "monitored", "risk_level": 1,
+      "max_occupancy": 5,
+      "allowed_categories": ["Employee", "Visitor", "Unknown"]
+    }
+  ]
+}
